@@ -32,36 +32,23 @@ echo "<script>alert('Invalid Details');</script>";
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE  -->
+  <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
+  
 </head>
 <body>
     <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-<div class="content-wrapper">
-<div class="container">
-<div class="row pad-botm">
-<div class="col-md-12">
-<h4 class="header-line">ADMIN LOGIN FORM</h4>
-</div>
+<div>
+    <h4>ADMIN LOGIN FORM</h4>
 </div>
              
 <!--LOGIN PANEL START-->           
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
-<div class="panel panel-info">
-<div class="panel-heading">
+<div>
+<div>
  ADMIN LOGIN FORM
 </div>
-<div class="panel-body">
 <form role="form" method="post">
 
 <div class="form-group">
@@ -87,11 +74,6 @@ echo "<script>alert('Invalid Details');</script>";
      <!-- CONTENT-WRAPPER SECTION END-->
  <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
-</script>
+    
 </body>
 </html>

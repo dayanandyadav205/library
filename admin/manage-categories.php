@@ -29,33 +29,22 @@ header('location:manage-categories.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Manage Categories</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- DATATABLE STYLE  -->
-    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
+   
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div class="content-wrapper">
-         <div class="container">
-        <div class="row pad-botm">
-            <div class="col-md-12">
-                <h4 class="header-line">Manage Categories</h4>
+    <div>
+        <h4 class="header-line">Manage Categories</h4>
     </div>
-     <div class="row">
+     <div>
     <?php if($_SESSION['error']!="")
     {?>
-<div class="col-md-6">
-<div class="alert alert-danger" >
+
+<div>
  <strong>Error :</strong> 
  <?php echo htmlentities($_SESSION['error']);?>
 <?php echo htmlentities($_SESSION['error']="");?>
@@ -64,8 +53,8 @@ header('location:manage-categories.php');
 <?php } ?>
 <?php if($_SESSION['msg']!="")
 {?>
-<div class="col-md-6">
-<div class="alert alert-success" >
+
+<div>
  <strong>Success :</strong> 
  <?php echo htmlentities($_SESSION['msg']);?>
 <?php echo htmlentities($_SESSION['msg']="");?>
@@ -74,8 +63,8 @@ header('location:manage-categories.php');
 <?php } ?>
 <?php if($_SESSION['updatemsg']!="")
 {?>
-<div class="col-md-6">
-<div class="alert alert-success" >
+
+<div>
  <strong>Success :</strong> 
  <?php echo htmlentities($_SESSION['updatemsg']);?>
 <?php echo htmlentities($_SESSION['updatemsg']="");?>
@@ -86,8 +75,8 @@ header('location:manage-categories.php');
 
    <?php if($_SESSION['delmsg']!="")
     {?>
-<div class="col-md-6">
-<div class="alert alert-success" >
+
+<div>
  <strong>Success :</strong> 
  <?php echo htmlentities($_SESSION['delmsg']);?>
 <?php echo htmlentities($_SESSION['delmsg']="");?>
@@ -99,16 +88,13 @@ header('location:manage-categories.php');
 
 
         </div>
-            <div class="row">
-                <div class="col-md-12">
+            <div>
+               
                     <!-- Advanced Tables -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                           Categories Listing
-                        </div>
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+        
+                        <div>
+                            <div >
+                                <table>
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -129,20 +115,20 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?>                                      
-                                        <tr class="odd gradeX">
-                                            <td class="center"><?php echo htmlentities($cnt);?></td>
-                                            <td class="center"><?php echo htmlentities($result->CategoryName);?></td>
-                                            <td class="center"><?php if($result->Status==1) {?>
-                                            <a href="#" class="btn btn-success btn-xs">Active</a>
+                                        <tr>
+                                            <td ><?php echo htmlentities($cnt);?></td>
+                                            <td ><?php echo htmlentities($result->CategoryName);?></td>
+                                            <td><?php if($result->Status==1) {?>
+                                            <a href="#">Active</a>
                                             <?php } else {?>
-                                            <a href="#" class="btn btn-danger btn-xs">Inactive</a>
+                                            <a href="#">Inactive</a>
                                             <?php } ?></td>
-                                            <td class="center"><?php echo htmlentities($result->CreationDate);?></td>
-                                            <td class="center"><?php echo htmlentities($result->UpdationDate);?></td>
-                                            <td class="center">
+                                            <td ><?php echo htmlentities($result->CreationDate);?></td>
+                                            <td ><?php echo htmlentities($result->UpdationDate);?></td>
+                                            <td >
 
-                                            <a href="edit-category.php?catid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button> 
-                                          <a href="manage-categories.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
+                                            <a href="edit-category.php?catid=<?php echo htmlentities($result->id);?>"><button>Edit</button> 
+                                          <a href="manage-categories.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button> Delete</button>
                                             </td>
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      
@@ -164,16 +150,7 @@ foreach($results as $result)
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY  -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-    <!-- DATATABLE SCRIPTS  -->
-    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
-    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
+    
 </body>
 </html>
 <?php } ?>

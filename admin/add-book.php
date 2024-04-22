@@ -62,15 +62,10 @@ echo "<script>window.location.href='manage-books.php'</script>";
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Add Book</title>
-    <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE  -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-<script type="text/javascript">
+        <!-- GENERAL STYLES  -->
+        <link href="assets/css/style.css" rel="stylesheet" />
+   
+   <script type="text/javascript">
     function checkisbnAvailability() {
 $("#loaderIcon").show();
 jQuery.ajax({
@@ -91,33 +86,20 @@ error:function (){}
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div class="content-wrapper">
-         <div class="container">
-        <div class="row pad-botm">
-            <div class="col-md-12">
-                <h4 class="header-line">Add Book</h4>
+
+                <h4>Add Book</h4>
                 
                             </div>
 
 </div>
-<div class="row">
-<div class="col-md-12 col-sm-12 col-xs-12">
-<div class="panel panel-info">
-<div class="panel-heading">
 Book Info
 </div>
-<div class="panel-body">
+<div>
 <form role="form" method="post" enctype="multipart/form-data">
-
-<div class="col-md-6">   
-<div class="form-group">
 <label>Book Name<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="bookname" autocomplete="off"  required />
 </div>
 </div>
-
-<div class="col-md-6">  
-<div class="form-group">
 <label> Category<span style="color:red;">*</span></label>
 <select class="form-control" name="category" required="required">
 <option value=""> Select Category</option>
@@ -137,8 +119,7 @@ foreach($results as $result)
  <?php }} ?> 
 </select>
 </div></div>
-
-<div class="col-md-6">  
+ 
 <div class="form-group">
 <label> Author<span style="color:red;">*</span></label>
 <select class="form-control" name="author" required="required">
@@ -158,12 +139,11 @@ foreach($results as $result)
  <?php }} ?> 
 </select>
 </div></div>
-
-<div class="col-md-6">  
+ 
 <div class="form-group">
 <label>ISBN Number<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="isbn" id="isbn" required="required" autocomplete="off" onBlur="checkisbnAvailability()"  />
-<p class="help-block">An ISBN is an International Standard Book Number.ISBN Must be unique</p>
+<p>An ISBN is an International Standard Book Number.ISBN Must be unique</p>
          <span id="isbn-availability-status" style="font-size:12px;"></span>
 </div></div>
 
@@ -192,13 +172,7 @@ foreach($results as $result)
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY  -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
+   
 </body>
 </html>
 <?php } ?>

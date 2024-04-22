@@ -37,14 +37,10 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
     <meta name="author" content="" />
     <title>Online Library Management System | Password Recovery </title>
     <!-- BOOTSTRAP CORE STYLE  -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT AWESOME STYLE  -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-     <script type="text/javascript">
+    
+    <script type="text/javascript">
 function valid()
 {
 if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
@@ -62,19 +58,13 @@ return true;
     <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-<div class="content-wrapper">
-<div class="container">
-<div class="row pad-botm">
-<div class="col-md-12">
+<div>
 <h4 class="header-line">User Password Recovery</h4>
 </div>
-</div>
+
              
 <!--LOGIN PANEL START-->           
-<div class="row">
-<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
-<div class="panel panel-info">
-<div class="panel-heading">
+<div>
  LOGIN FORM
 </div>
 <div class="panel-body">
@@ -101,7 +91,7 @@ return true;
 </div>
 
 
- <button type="submit" name="change" class="btn btn-info">Chnage Password</button> | <a href="index.php">Login</a>
+ <button type="submit" name="change">Chnage Password</button> | <a href="index.php">Login</a>
 </form>
  </div>
 </div>
@@ -115,11 +105,6 @@ return true;
      <!-- CONTENT-WRAPPER SECTION END-->
  <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-      <!-- CUSTOM SCRIPTS  -->
-    <script src="assets/js/custom.js"></script>
 
 </body>
 </html>
