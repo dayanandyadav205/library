@@ -1,0 +1,21 @@
+1. Install XAMPP
+
+2. start XAMPP from xampp control panel (located inside xampp folder) 
+
+3. start apache and MySQL modules from xamp control panel
+
+4. open: http://localhost/phpmyadmin/ 
+
+5. Create database names: library
+
+6. import "library.sql" file
+
+7. Now copy library folder in htdocs folder (located inside xamp folder)
+
+8. open: http://localhost/library
+
+
+thank you
+
+
+If you want to make changes in code then open library folder (contained all web pages) in VSCode.
