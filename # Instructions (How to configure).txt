@@ -19,3 +19,9 @@ thank you
 
 
 If you want to make changes in code then open library folder (contained all web pages) in VSCode.
+
+
+	Admin login details:
+
+		username: admin
+		password: D@123
