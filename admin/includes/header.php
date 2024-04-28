@@ -16,7 +16,9 @@
             <div class="right-div">
                 <a href="logout.php" class="btn btn-danger pull-right">Log Out</a>
             </div>
-      
+      <br>
+      <hr>
+      <hr>
     <!-- LOGO HEADER END-->
     <section>
                     <div class="menu-bar">
