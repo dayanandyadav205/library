@@ -2,7 +2,7 @@
      
                 <a>
 
-                    <img src="assets/img/logo.jpg" width="100%" height="100%">
+                    <img src="assets/img/logo.jpg">
                 </a>
 
             </div>

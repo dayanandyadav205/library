@@ -1,14 +1,8 @@
-<div class="navbar navbar-inverse set-radius-zero" >
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+<div>
+
                 <a>
 
-                <img src="assets/img/logo.jpg" width="100%" height="100%">
+                <img src="assets/img/logo.jpg" width="100%">
                 </a>
 
             </div>
@@ -54,7 +48,7 @@
                                      <li class="active"><a href="manage-issued-books.php">Manage Issued Books</a></li>
                                 </ul>
                             </li>
-                             <li class="active"><a href="reg-students.php">Reg Students</a></li>
+                             <li class="active"><a href="reg-students.php">Registered Students</a></li>
                     
                              <li class="active"><a href="change-password.php">Change Password</a></li>
                         </ul>
