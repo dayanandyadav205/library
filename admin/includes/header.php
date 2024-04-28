@@ -6,9 +6,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">
+                <a>
 
-                    <img src="assets/img/logo.png" />
+                <img src="assets/img/logo.jpg" width="100%" height="100%">
                 </a>
 
             </div>
