@@ -38,21 +38,36 @@ echo "<script>window.location.href='manage-books.php'</script>";
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Edit Book</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
- 
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-                <h4>Add Book</h4>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Add Book</h4>
                 
                             </div>
 
-
-<div>
+</div>
+<div class="row">
+<div class="col-md12 col-sm-12 col-xs-12">
+<div class="panel panel-info">
+<div class="panel-heading">
+Book Info
+</div>
+<div class="panel-body">
 <form role="form" method="post">
 <?php 
 $bookid=intval($_GET['bookid']);
@@ -67,20 +82,20 @@ if($query->rowCount() > 0)
 foreach($results as $result)
 {               ?>  
 
-
+<div class="col-md-6">
 <div class="form-group">
 <label>Book Image</label>
 <img src="bookimg/<?php echo htmlentities($result->bookImage);?>" width="100">
 <a href="change-bookimg.php?bookid=<?php echo htmlentities($result->bookid);?>">Change Book Image</a>
 </div></div>
 
-
+<div class="col-md-6">
 <div class="form-group">
 <label>Book Name<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="bookname" value="<?php echo htmlentities($result->BookName);?>" required />
 </div></div>
 
-
+<div class="col-md-6">
 <div class="form-group">
 <label> Category<span style="color:red;">*</span></label>
 <select class="form-control" name="category" required="required">
@@ -108,7 +123,7 @@ else
 </select>
 </div></div>
 
-
+<div class="col-md-6">
 <div class="form-group">
 <label> Author<span style="color:red;">*</span></label>
 <select class="form-control" name="author" required="required">
@@ -135,7 +150,7 @@ continue;
 </div></div>
 
 
-
+<div class="col-md-6">
 <div class="form-group">
 <label>ISBN Number<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="isbn" value="<?php echo htmlentities($result->ISBNNumber);?>"  readonly />
@@ -143,18 +158,22 @@ continue;
 </div></div>
 
 
-
+<div class="col-md-6">
  <div class="form-group">
  <label>Price in USD<span style="color:red;">*</span></label>
  <input class="form-control" type="text" name="price" value="<?php echo htmlentities($result->BookPrice);?>"   required="required" />
  </div></div>
  <?php }} ?><div class="col-md-12">
-<button type="submit" name="update" class="btn btn-info">Update Book</button></div>
+<button type="submit" name="update" class="btn btn-info">Update </button></div>
 
                                     </form>
-                     
+                            </div>
+                        </div>
+                            </div>
 
+        </div>
    
+    </div>
     </div>
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>

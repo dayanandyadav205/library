@@ -3,27 +3,91 @@
    GENERAL STYLES
  ============================================================ */
 
- body {
-  font-family: 'Open Sans', sans-serif;
-  line-height:28px;
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height:28px;
+   
 }
+/* .set-radius-zero {
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+.content-wrapper {
+    margin-top: 40px;
+    min-height:800px;
+    padding-bottom:90px;
+}
+.header-line {
+    font-weight:900;
+    padding-bottom:25px;
+    border-bottom:1px solid #eeeeee;
+    text-transform:uppercase;
+}
+.pad-botm {
+    padding-bottom:30px;
+} */
+
 
 /* =============================================================
- NAVBAR & MENU STYLES
-============================================================ */
+   NAVBAR & MENU STYLES
+ ============================================================ */
+
+.menu-bar{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+
+.menu-bar ul{
+   display: inline-flex;
+   list-style: none;
+   color: #fff;
+}
+
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.active, .menu-bar ul li:hover
+{
+    background-color: #2bab0d;
+    border-radius: 3px;
+}
+
+sub-menu-1
+{
+    display: none;
+    
+}
+
+
 
 .right-div {
-  float: right; 
-  /* padding: 20px; */
+    float: right; 
+    padding: 20px;
 }
 
-
-
 /* =============================================================
- DASHBOARD STYLES
-============================================================ */
+   FOOTER SECTION STYLES
+ ============================================================ */
+.footer-section {
+    padding:25px 50px 25px 50px;
+    color:#000;
+    font-size:13px;
+      background-color: #f7f7f7;
+      text-align:right;
+       border-top:5px solid #9170E4;
 
-/* =============================================================
- FOOTER SECTION STYLES
-============================================================ */
+}
+
+    .footer-section a, .footer-section a:hover {
+        color:#000;
+    }
 

@@ -1,50 +1,61 @@
-<div>
-<img src="assets/img/logo.jpg" height="100px"/>
+<div class="navbar navbar-inverse set-radius-zero" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+
+                    <img src="assets/img/logo.png" />
+                </a>
+
             </div>
-            
+
             <div class="right-div">
-            <nav>
-                <a href="logout.php">Log Out</a>
-                <img src="assets/img/user.gif" width="50px" />
-                </nav>
-                
+                <a href="logout.php" class="btn btn-danger pull-right">Log Out</a>
             </div>
+      
     <!-- LOGO HEADER END-->
-    <section class="container">
-    <nav>
-            <ul>
-                            <li><a href="dashboard.php">DASHBOARD</a></li>
-                            <li>Categories
-                                <ul>
+    <section>
+                    <div class="menu-bar">
+                        <ul>
+                            <li class="active"><a href="dashboard.php">DASHBOARD</a></li>
+                           
+                            <li class="active"><a href="#"> Categories <i class="fa fa-angle-down"></i></a>
+                              <div class="sub-menu-1">  
+                            <ul>
                                     <li><a href="add-category.php">Add Category</a></li>
-                                    <li><a href="manage-categories.php">Manage Categories</a></li>
+                                     <li><a href="manage-categories.php">Manage Categories</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#"> Authors <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                    <li class="active"><a href="add-author.php">Add Author</a></li>
+                                     <li class="active"><a href="manage-authors.php">Manage Authors</a></li>
+                                </ul>
+                            </li>
+                              <li class="active">
+                                <a href="#"> Books <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                    <li class="active"><a href="add-book.php">Add Book</a></li>
+                                     <li class="active"><a href="manage-books.php">Manage Books</a></li>
                                 </ul>
                             </li>
 
-                            <li>Authors
+                           <li class="active">
+                                <a href="#">Issue Books<i class="fa fa-angle-down"></i></a>
                                 <ul>
-                                    <li><a href="add-author.php">Add Author</a></li>
-                                     <li><a href="manage-authors.php">Manage Authors</a></li>
+                                    <li class="active"><a href="issue-book.php">Issue New Book</a></li>
+                                     <li class="active"><a href="manage-issued-books.php">Manage Issued Books</a></li>
                                 </ul>
                             </li>
-
-                            <li>Books
-                                <ul>
-                                    <li><a href="add-book.php">Add Book</a></li>
-                                    <li><a href="manage-books.php">Manage Books</a></li>
-                                </ul>
-                            </li>
-
-                           <li>Issue Books
-                                <ul>
-                                    <li><a href="issue-book.php">Issue New Book</a></li>
-                                    <li><a href="manage-issued-books.php">Manage Issued Books</a></li>
-                                </ul>
-                                <br>
-                            </li>
-                            <li><a href="reg-students.php">Registered Students</a></li> 
-                            <li><a href="change-password.php">Change Password</a></li>
-            </ul>
-    <nav>                
-        
+                             <li class="active"><a href="reg-students.php">Reg Students</a></li>
+                    
+                             <li class="active"><a href="change-password.php">Change Password</a></li>
+                        </ul>
+                    </div>
+             
     </section>

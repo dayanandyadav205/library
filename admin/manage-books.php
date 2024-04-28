@@ -29,21 +29,42 @@ header('location:manage-books.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Manage Books</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- DATATABLE STYLE  -->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
                 <h4 class="header-line">Manage Books</h4>
     </div>
+  
+
+
         </div>
+            <div class="row">
+                <div class="col-md-12">
                     <!-- Advanced Tables -->
-                        <div>
-                            <div>
-                                <table>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           Books Listing
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -65,19 +86,19 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?>                                      
-                                        <tr>
-                                            <td ><?php echo htmlentities($cnt);?></td>
-                                            <td width="300">
+                                        <tr class="odd gradeX">
+                                            <td class="center"><?php echo htmlentities($cnt);?></td>
+                                            <td class="center" width="300">
 <img src="bookimg/<?php echo htmlentities($result->bookImage);?>" width="100">
                                                 <br /><b><?php echo htmlentities($result->BookName);?></b></td>
-                                            <td ><?php echo htmlentities($result->CategoryName);?></td>
-                                            <td ><?php echo htmlentities($result->AuthorName);?></td>
-                                            <td ><?php echo htmlentities($result->ISBNNumber);?></td>
-                                            <td ><?php echo htmlentities($result->BookPrice);?></td>
-                                            <td >
+                                            <td class="center"><?php echo htmlentities($result->CategoryName);?></td>
+                                            <td class="center"><?php echo htmlentities($result->AuthorName);?></td>
+                                            <td class="center"><?php echo htmlentities($result->ISBNNumber);?></td>
+                                            <td class="center"><?php echo htmlentities($result->BookPrice);?></td>
+                                            <td class="center">
 
-                                            <a href="edit-book.php?bookid=<?php echo htmlentities($result->bookid);?>"><button>Edit</button> 
-                                          <a href="manage-books.php?del=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button> Delete</button>
+                                            <a href="edit-book.php?bookid=<?php echo htmlentities($result->bookid);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button> 
+                                          <a href="manage-books.php?del=<?php echo htmlentities($result->bookid);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
                                             </td>
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      
@@ -99,7 +120,7 @@ foreach($results as $result)
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-   
+  
 </body>
 </html>
 <?php } ?>

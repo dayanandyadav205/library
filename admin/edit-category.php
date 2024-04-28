@@ -33,20 +33,38 @@ header('location:manage-categories.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Edit Categories</title>
-  <!-- CUSTOM STYLE  -->
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-  
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-           
-                <h4>Edit category</h4>
+    <div class="content-wra
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Edit category</h4>
                 
                             </div>
-<div>
+
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3"">
+<div class="panel panel-info">
+<div class="panel-heading">
+Category Info
+</div>
+ 
+<div class="panel-body">
 <form role="form" method="post">
 <?php 
 $catid=intval($_GET['catid']);
@@ -91,9 +109,17 @@ foreach($results as $result)
 <?php } ?>
 </div>
 <?php }} ?>
-<button type="submit" name="update" class="btn btn-info">Update Category</button>
+<button type="submit" name="update" class="btn btn-info">Update </button>
+
                                     </form>
-                       
+                            </div>
+                        </div>
+                            </div>
+
+        </div>
+   
+    </div>
+    </div>
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->

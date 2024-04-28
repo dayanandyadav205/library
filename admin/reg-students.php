@@ -46,22 +46,41 @@ header('location:reg-students.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Manage Reg Students</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- DATATABLE STYLE  -->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-  
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-        <h4 class="header-line">Manage Reg Students</h4>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Manage Reg Students</h4>
     </div>
 
 
-                        <div>
-                            <div>
-                                <table>
+        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          Reg Students
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -84,14 +103,14 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?>                                      
-                                        <tr>
-                                            <td><?php echo htmlentities($cnt);?></td>
-                                            <td><?php echo htmlentities($result->StudentId);?></td>
-                                            <td><?php echo htmlentities($result->FullName);?></td>
-                                            <td><?php echo htmlentities($result->EmailId);?></td>
-                                            <td><?php echo htmlentities($result->MobileNumber);?></td>
-                                             <td><?php echo htmlentities($result->RegDate);?></td>
-                                            <td><?php if($result->Status==1)
+                                        <tr class="odd gradeX">
+                                            <td class="center"><?php echo htmlentities($cnt);?></td>
+                                            <td class="center"><?php echo htmlentities($result->StudentId);?></td>
+                                            <td class="center"><?php echo htmlentities($result->FullName);?></td>
+                                            <td class="center"><?php echo htmlentities($result->EmailId);?></td>
+                                            <td class="center"><?php echo htmlentities($result->MobileNumber);?></td>
+                                             <td class="center"><?php echo htmlentities($result->RegDate);?></td>
+                                            <td class="center"><?php if($result->Status==1)
                                             {
                                                 echo htmlentities("Active");
                                             } else {
@@ -100,16 +119,16 @@ foreach($results as $result)
                                             echo htmlentities("Blocked");
 }
                                             ?></td>
-                                            <td>
+                                            <td class="center">
 <?php if($result->Status==1)
  {?>
-<a href="reg-students.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to block this student?');" >  <button> Inactive</button>
+<a href="reg-students.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to block this student?');" >  <button class="btn btn-danger"> Inactive</button>
 <?php } else {?>
 
-<a href="reg-students.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to active this student?');"><button> Active</button> 
+<a href="reg-students.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to active this student?');"><button class="btn btn-primary"> Active</button> 
                                             <?php } ?>
 
-<a href="student-history.php?stdid=<?php echo htmlentities($result->StudentId);?>"><button>Details</button> 
+<a href="student-history.php?stdid=<?php echo htmlentities($result->StudentId);?>"><button class="btn btn-success"> Details</button> 
 
                                           
                                             </td>
@@ -133,7 +152,7 @@ foreach($results as $result)
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    
+
 </body>
 </html>
 <?php } ?>

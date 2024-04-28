@@ -1,16 +1,17 @@
 <div>
-<img src="assets/img/logo.jpg" height="100px"/>
+     
+                <a>
+
+                    <img src="assets/img/logo.png" />
+                </a>
+
             </div>
 <?php if($_SESSION['login'])
 {
 ?> 
-
             <div class="right-div">
-            <nav>
-                <a href="logout.php">Log Out</a>
-                </nav>
+                <a href="logout.php" class="btn btn-danger pull-right">Log Out</a>
             </div>
-
             <?php }?>
         </div>
     </div>
@@ -18,32 +19,31 @@
 <?php if($_SESSION['login'])
 {
 ?>    
-<section >
-    <nav> 
-            <a href="dashboard.php">DASHBOARD</a>
-            <a href="issued-books.php">Issued Books</a>
-            <a href="my-profile.php">My Profile</a>
-            <a href="change-password.php">Change Password</a>
-    </nav> 
-                           
-                    </div>
-                </div>
+    <section>
+        <div class="menu-bar">
+                        <ul>
+                            <li><a href="dashboard.php">DASHBOARD</a></li>
+                            <li><a href="issued-books.php">Issued Books</a></li>
+                             <li>
+                                <a href="#"> Account <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                    <li><a href="my-profile.php">My Profile</a></li>
+                                     <li><a href="change-password.php">Change Password</a></li>
+                                </ul>
+                            </li>
 
+                        </ul>
             </div>
-        </div>
     </section>
     <?php } else { ?>
         <section>
-        <nav>                                     
-            <a href="index.php">Home</a>
-            <a href="signup.php">User Registration</a>
-            <a href="adminlogin.php">Admin Login</a>
-        </nav>
-                    </div>
+                <div class="menu-bar">
+                        <ul>                        
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="signup.php">User Registration</a></li>
+                            <li><a href="adminlogin.php">Admin Login</a></li>
+                        </ul>
                 </div>
-
-            </div>
-        </div>
-    </section>
+        </section>
 
     <?php } ?>

@@ -46,23 +46,39 @@ echo "<script>alert('Invalid Details');</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-  <!-- CUSTOM STYLE  -->
+    <title>Online Library Management System | </title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-   
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
     <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
 <div> </div>
-<div>
-    <h4>USER LOGIN FORM</h4>
+<div class="content-wrapper">
+<div class="container">
+<div class="row pad-botm">
+<div class="col-md-12">
+<!-- <img src="assets/img/2.jpg" alt=""> -->
+<h4 class="header-line">USER LOGIN FORM</h4>
 </div>
-</div>          
-<div>
+</div>
+ <!-- <a name="ulogin"></a>             -->
+<!--LOGIN PANEL START-->           
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
+<div class="panel panel-info">
+<div class="panel-heading">
  USER LOGIN FORM
 </div>
-
+<div class="panel-body">
 <form role="form" method="post">
 
 <div class="form-group">
@@ -75,7 +91,9 @@ echo "<script>alert('Invalid Details');</script>";
 <p class="help-block"><a href="user-forgot-password.php">Forgot Password</a></p>
 </div>
 
- <button type="submit" name="login">LOGIN </button> | <a href="signup.php">Not Register Yet</a>
+
+
+ <button type="submit" name="login" class="btn btn-info">LOGIN </button> | <a href="signup.php">Not Register Yet</a>
 </form>
  </div>
 </div>
@@ -89,7 +107,11 @@ echo "<script>alert('Invalid Details');</script>";
      <!-- CONTENT-WRAPPER SECTION END-->
  <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-    
+      <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
 
 </body>
 </html>

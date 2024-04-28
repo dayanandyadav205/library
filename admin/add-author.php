@@ -37,38 +37,58 @@ header('location:manage-authors.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Add Author</title>
-   <!-- CUSTOM STYLE  -->
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
- 
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-                <h4 >Add Author</h4>
+    <div class="content-wra
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Add Author</h4>
                 
                             </div>
 
-
-<div>
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3"">
+<div class="panel panel-info">
+<div class="panel-heading">
+Author Info
+</div>
+<div class="panel-body">
 <form role="form" method="post">
 <div class="form-group">
 <label>Author Name</label>
 <input class="form-control" type="text" name="author" autocomplete="off"  required />
 </div>
 
-<button type="submit" name="create" class="btn btn-info">Add Author</button>
+<button type="submit" name="create" class="btn btn-info">Add </button>
 
                                     </form>
-                       
+                            </div>
+                        </div>
+                            </div>
 
-  
+        </div>
+   
+    </div>
     </div>
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-  
+ 
 </body>
 </html>
 <?php } ?>

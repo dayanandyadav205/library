@@ -36,22 +36,37 @@ echo '<script>alert("Your profile has been updated")</script>';
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title>Online Library Management System | Student Signup</title>
-   <!-- CUSTOM STYLE  -->
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-   
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /> 
+
 </head>
 <body>
     <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-        <h4 class="header-line">My Profile</h4>
-    </div>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">My Profile</h4>
+                
+                            </div>
 
-                        <div>
+        </div>
+             <div class="row">
+           
+<div class="col-md-9 col-md-offset-1">
+               <div class="panel panel-danger">
+                        <div class="panel-heading">
                            My Profile
                         </div>
-                        
+                        <div class="panel-body">
                             <form name="signup" method="post">
 <?php 
 $sid=$_SESSION['stdid'];
@@ -110,7 +125,7 @@ foreach($results as $result)
 </div>
 <?php }} ?>
                               
-<button type="submit" name="update" id="submit">Update Now </button>
+<button type="submit" name="update" class="btn btn-primary" id="submit">Update Now </button>
 
                                     </form>
                             </div>
@@ -121,7 +136,11 @@ foreach($results as $result)
     </div>
      <!-- CONTENT-WRAPPER SECTION END-->
     <?php include('includes/footer.php');?>
-    
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
 <?php } ?>

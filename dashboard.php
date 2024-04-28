@@ -15,25 +15,37 @@ else{?>
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | User Dash Board</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
- 
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 </head>
 <body>
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-      <h4 class="header-line">User DASHBOARD</h4>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">User DASHBOARD</h4>
                 
                             </div>
-        </div>   
-             <div>
+
+        </div>
+             
+             <div class="row">
+
 
 <a href="listed-books.php">
-
- <div>
- 
+<div class="col-md-4 col-sm-4 col-xs-6">
+ <div class="alert alert-success back-widget-set text-center">
+ <i class="fa fa-book fa-5x"></i>
 <?php 
 $sql ="SELECT id from tblbooks ";
 $query = $dbh -> prepare($sql);
@@ -44,7 +56,10 @@ $listdbooks=$query->rowCount();
 <h3><?php echo htmlentities($listdbooks);?></h3>
 Books Listed
 </div></div></a>
-          
+             
+               <div class="col-md-4 col-sm-4 col-xs-6">
+                      <div class="alert alert-warning back-widget-set text-center">
+                            <i class="fa fa-recycle fa-5x"></i>
 <?php 
 $rsts=0;
  $sid=$_SESSION['stdid'];
@@ -63,12 +78,16 @@ $returnedbooks=$query2->rowCount();
                     </div>
 
 <a href="issued-books.php">
-
- <div>
-
+<div class="col-md-4 col-sm-4 col-xs-6">
+ <div class="alert alert-success back-widget-set text-center">
+ <i class="fa fa-book fa-5x"></i>
       <h3>&nbsp;</h3>
 Issued Books
 </div></div></a>
+
+
+
+
 
         </div>    
     </div>
@@ -76,7 +95,13 @@ Issued Books
      <!-- CONTENT-WRAPPER SECTION END-->
 <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
-  
+     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
 <?php } ?>

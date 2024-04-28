@@ -38,10 +38,15 @@ header('location:manage-issued-books.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Online Library Management System | Issued Book Details</title>
-   <!-- CUSTOM STYLE  -->
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
     <link href="assets/css/style.css" rel="stylesheet" />
-  
-  <script>
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+<script>
 // function for get student name
 function getstudent() {
 $("#loaderIcon").show();
@@ -86,11 +91,22 @@ error:function (){}
       <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-    <div>
-        <h4 class="header-line">Issued Book Details</h4>
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Issued Book Details</h4>
                 
                             </div>
-<div>
+
+</div>
+<div class="row">
+<div class="col-md-10 col-sm-6 col-xs-12 col-md-offset-1">
+<div class="panel panel-info">
+<div class="panel-heading">
+Issued Book Details
+</div>
+<div class="panel-body">
 <form role="form" method="post">
 <?php 
 $rid=intval($_GET['rid']);
@@ -110,25 +126,25 @@ foreach($results as $result)
 <input type="hidden" name="bookid" value="<?php echo htmlentities($result->bid);?>">
 <h4>Student Details</h4>
 <hr />
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Student ID :</label>
 <?php echo htmlentities($result->StudentId);?>
 </div></div>
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Student Name :</label>
 <?php echo htmlentities($result->FullName);?>
 </div></div>
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Student Email Id :</label>
 <?php echo htmlentities($result->EmailId);?>
 </div></div>
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Student Contact No :</label>
 <?php echo htmlentities($result->MobileNumber);?>
@@ -139,33 +155,33 @@ foreach($results as $result)
 <h4>Book Details</h4>
 <hr />
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Book Image :</label>
 <img src="bookimg/<?php echo htmlentities($result->bookImage); ?>" width="120">
 </div></div>
 
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Book Name :</label>
 <?php echo htmlentities($result->BookName);?>
 </div>
 </div>
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>ISBN :</label>
 <?php echo htmlentities($result->ISBNNumber);?>
 </div>
 </div>
 
- 
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Book Issued Date :</label>
 <?php echo htmlentities($result->IssuesDate);?>
 </div></div>
 
-
+<div class="col-md-6"> 
 <div class="form-group">
 <label>Book Returned Date :</label>
 <?php if($result->ReturnDate=="")
@@ -180,7 +196,7 @@ foreach($results as $result)
 </div>
 </div>
 
-
+<div class="col-md-12"> 
 <div class="form-group">
 <label>Fine (in Rs.) :</label>
 <?php 
@@ -196,7 +212,7 @@ echo htmlentities($result->fine);
 </div>
  <?php if($result->RetrunStatus==0){?>
 
-<button type="submit" name="return" id="submit">Return Book </button>
+<button type="submit" name="return" id="submit" class="btn btn-info">Return Book </button>
 
  </div>
 
@@ -213,6 +229,13 @@ echo htmlentities($result->fine);
      <!-- CONTENT-WRAPPER SECTION END-->
   <?php include('includes/footer.php');?>
       <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
 <?php } ?>
