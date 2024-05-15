@@ -58,8 +58,6 @@ $listdbooks=$query->rowCount();
 Books Listed
 </div></div></a>
 
-            
-       
              <a href="manage-issued-books.php">
                <div class="col-md-3 col-sm-3 col-xs-6">
                       <div class="alert alert-warning back-widget-set text-center">

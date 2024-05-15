@@ -1,11 +1,11 @@
-<div>
+<div class="menu-bar">
      
                 <a>
 
                     <img src="assets/img/logo.jpg">
                 </a>
 
-            </div>
+        
 <?php if($_SESSION['login'])
 {
 ?> 
@@ -38,12 +38,12 @@
     <?php } else { ?>
         <section>
                 <div class="menu-bar">
-                        <ul>                        
+                        <ul >                        
                             <li><a href="index.php">Home</a></li>
                             <li><a href="signup.php">User Registration</a></li>
                             <li><a href="adminlogin.php">Admin Login</a></li>
                         </ul>
                 </div>
         </section>
-
+        </div>
     <?php } ?>

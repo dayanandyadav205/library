@@ -61,16 +61,12 @@ echo "<script>alert('Invalid Details');</script>";
     <!------MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
-<div> </div>
-<div class="content-wrapper">
-<div class="container">
-<div class="row pad-botm">
-<div class="col-md-12">
-<!-- <img src="assets/img/2.jpg" alt=""> -->
+
+<div class="menu-bar">
 <h4 class="header-line">USER LOGIN FORM</h4>
 </div>
 </div>
- <!-- <a name="ulogin"></a>             -->
+ <a name="ulogin"></a>   
 <!--LOGIN PANEL START-->           
 <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
@@ -83,7 +79,7 @@ echo "<script>alert('Invalid Details');</script>";
 
 <div class="form-group">
 <label>Enter Email id</label>
-<input class="form-control" type="text" name="emailid" required autocomplete="off" />
+<input class="form-control" type="text" name="emailid" required autocomplete="on" />
 </div>
 <div class="form-group">
 <label>Password</label>
